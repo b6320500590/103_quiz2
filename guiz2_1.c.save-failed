@@ -6,11 +6,11 @@ int main()
 
     scanf("%d", &n);
 
-    int a[n], t[n];
+    int a, t[n];
 
     for(i=1; i<=n; i++)
     {
-        a[n]=0;
+        a=0;
         har=2;
         t[i]=0;
         j=i;
@@ -19,18 +19,18 @@ int main()
         {
             if(j%har==0)
             {
-                a[n]++;
+                a++;
 
                 j=j/har;
 
-                if(a[n]>2)
+                if(a>2)
                 {
                     t[i]=1;
+                    a=0;
                 }
             }
             else
             {
-                a[n]=a[n-1];
                 har++;
             }
         }
